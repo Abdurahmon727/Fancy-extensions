@@ -3,6 +3,6 @@
 /// More dartdocs go here.
 library;
 
-export 'src/fancy_extensions_base.dart';
+export 'src/list.dart';
 
 // TODO: Export any libraries intended for clients of this package.
