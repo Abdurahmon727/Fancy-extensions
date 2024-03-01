@@ -1,7 +1,10 @@
 name: fancy_extensions
 description: A starting point for Dart libraries or applications.
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+homepage: https://github.com/Abdurahmon727/fancy_extensions
+repository: https://github.com/Abdurahmon727/fancy_extensions
+issue_tracker: https://github.com/Abdurahmon727/fancy_extensions/issues
+# documentation: https://github.com/Abdurahmon727/fancy_extensions/tree/main/doc
 
 environment:
   sdk: ^3.3.0
