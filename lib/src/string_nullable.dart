@@ -1,11 +1,14 @@
 extension FancyExtensionsStringNullable on String? {
-  ///
-  String ifNullOrEmpty(String val) {
-    if (this == null || this!.isEmpty) return val;
+  /// returns [defaultValue] if this nullable string is either null or empty
+  /// otherwise returns value itself
+  String ifNullOrEmpty(String defaultValue) {
+    if (this == null || this!.isEmpty) return defaultValue;
     return this!;
   }
 
-  String firstLetterOrBlankString() {
+  /// returns firstLeffter if it exists
+  /// otherwise returns empty string
+  String get firstLetterOrBlankString {
     if (this == null || this!.isEmpty) return '';
     return this![0];
   }

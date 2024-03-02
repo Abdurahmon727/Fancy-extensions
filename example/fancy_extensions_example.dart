@@ -1,5 +1,7 @@
 import 'package:fancy_extensions/fancy_extensions.dart';
 
+class Data {}
+
 void main() {
   final List<List<int>?> array = [
     null,
@@ -7,8 +9,15 @@ void main() {
     []
   ];
 
+  final Data? dataInstance = null;
+  dataInstance.let((it) => it);
+
   ///generic
-  final int integer = 5;
+  final int? integer = 5;
+
+  integer?.let((type) {
+    type.isEven;
+  });
   final notFive = integer.ifReturn(integer == 5, 0);
 
   final double? double2 = null;
@@ -17,7 +26,6 @@ void main() {
   ///list
   final List<int>? list = null;
   final data = list.ifNull([]);
-  list.firstOrNull;
 
   ///string
   final String string = '';
@@ -27,5 +35,5 @@ void main() {
   stringNullable.ifNullOrEmpty('');
   stringNullable.ifReturn(false, string);
 
-  print(data);
+  print(dataInstance);
 }

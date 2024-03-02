@@ -1,11 +1,12 @@
 extension FancyExtensionsString on String {
-  ///
-  String ifEmpty(String val) {
-    if (isEmpty) return val;
+  /// if string is empty returns [defaultValue]
+  /// otherwise returns value itself
+  String ifEmpty(String defaultValue) {
+    if (isEmpty) return defaultValue;
     return this;
   }
 
-  ///
+  /// returns this string with first letter capitilized
   String get capitilizeFirstLetter {
     if (isEmpty) return '';
     if (length == 1) return this[0].toUpperCase();
