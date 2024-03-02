@@ -14,7 +14,7 @@ This package provides a collection of convenient Dart extensions for common oper
 * **`ifReturn`**: Executes a function and returns its result only if a condition is true.
   ```dart
   int age = 25;
-  int? adultAge = age.ifReturn((age) => age >= 18, null);
+  int? adultAge = age.ifReturn(age >= 18, null);
   print(adultAge); // Output: 25
   ```
 * **`let`**: Introduces a temporary variable within a code block, similar to let in other languages.
