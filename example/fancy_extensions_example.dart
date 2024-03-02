@@ -1,39 +1,57 @@
+// ignore_for_file: unused_local_variable, dead_code
+
 import 'package:fancy_extensions/fancy_extensions.dart';
 
-class Data {}
+class SampleModel {
+  SampleModel({this.integer, this.string});
+
+  int? integer;
+  String? string;
+
+  SampleModel copyWith({
+    int? integer,
+    String? string,
+  }) =>
+      SampleModel(
+        integer: integer ?? this.integer,
+        string: string ?? this.string,
+      );
+}
 
 void main() {
-  final List<List<int>?> array = [
-    null,
-    [0, 1],
-    []
-  ];
+  /// ifNull
+  SampleModel? nullableVariable;
+  final nonNullable = nullableVariable.ifNull(SampleModel());
 
-  final Data? dataInstance = null;
-  dataInstance.let((it) => it);
+  /// ifReturn
+  final modifierVariable = nonNullable.ifReturn(
+      nonNullable.integer == null, nonNullable.copyWith(integer: 5));
 
-  ///generic
-  final int? integer = 5;
-
-  integer?.let((type) {
-    type.isEven;
+  /// let
+  nullableVariable.let((it) {
+    it.integer = 5;
+    it.string = '';
   });
-  final notFive = integer.ifReturn(integer == 5, 0);
 
-  final double? double2 = null;
-  double2.ifReturn(true, 0);
+  /// *** Lists
+  List<SampleModel>? nullableList;
 
-  ///list
-  final List<int>? list = null;
-  final data = list.ifNull([]);
+  /// ifNullOrEmpty
+  final uiList = nullableList.ifNullOrEmpty([SampleModel()]);
 
-  ///string
-  final String string = '';
-  final String? stringNullable = null;
+  /// firstOrNull
+  final firstItem = nullableList.firstOrNull;
 
-  string.ifReturn(false, '');
-  stringNullable.ifNullOrEmpty('');
-  stringNullable.ifReturn(false, string);
+  /// elementAtOrNull
+  final element = nullableList.elementAtOrNull(5);
 
-  print(dataInstance);
+  /// *** String
+  String? nullableString;
+  String nonNullableString = nullableString.ifNull('');
+
+  /// ifEmpty
+  final nonEmptyString = nonNullableString.ifEmpty('defaultValue');
+
+  /// ifNullOrEmpty
+  final uiString = nullableString.ifNullOrEmpty('Not Found');
 }
