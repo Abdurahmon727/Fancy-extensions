@@ -1,4 +1,4 @@
-## Dart Extensions Package
+## ✨ Dart Fancy Extensions Package
 
 This package provides a collection of convenient Dart extensions for common operations, enhancing readability and improving code maintainability.
 
