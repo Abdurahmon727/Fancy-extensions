@@ -1,6 +1,6 @@
 name: fancy_extensions
 description: This package provides a collection of convenient Dart extensions for common operations, enhancing readability and improving code maintainability.
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/Abdurahmon727/fancy_extensions
 repository: https://github.com/Abdurahmon727/fancy_extensions
 issue_tracker: https://github.com/Abdurahmon727/fancy_extensions/issues
