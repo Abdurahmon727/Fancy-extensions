@@ -36,7 +36,7 @@ This package provides a collection of convenient Dart extensions for common oper
   print(capitalizedGreeting); // Output: Hello
   ```
 
-**🎖Installation:**
+**🎖 Installation:**
 
 1. Add the following dependency to your `pubspec.yaml` file:
 
@@ -49,7 +49,7 @@ This package provides a collection of convenient Dart extensions for common oper
 
 2. Run `pub get` to install the package.
 
-**🎮Usage:**
+**🎮 Usage:**
 
 Import the package in your Dart files:
 
@@ -59,10 +59,10 @@ import 'package:fancy_extensions/fancy_extensions.dart';
 
 Then, use the extensions on your variables and data structures as demonstrated in the examples above.
 
-**🔥Contributing:**
+**🔥 Contributing:**
 
 We welcome contributions to this package! Please feel free to open issues or pull requests.
 
-**⭐️License:**
+**⭐️ License:**
 
 This package is licensed under BSD 3-Clause License: [BSD 3-Clause License](https://github.com/Abdurahmon727/fancy_extensions?tab=BSD-3-Clause-1-ov-file#readme).
