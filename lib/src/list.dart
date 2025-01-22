@@ -21,12 +21,12 @@ extension FancyExtensionsList<T> on List<T> {
 
   /// Safe way of getting element at [index]
   /// returns first last of list if it exists otherwise returns null
-  T? elementAtOrNull(int index) {
-    try {
-      final element = this[index];
-      return element;
-    } catch (_) {
-      return null;
+  /// Safely gets the element at the specified index.
+  /// Returns `null` if the index is out of bounds, or the provided `defaultValue` if specified.
+  T? tryGet(int index, {T? defaultValue}) {
+    if (index < 0 || index >= (this.length ?? 0)) {
+      return defaultValue;
     }
+    return this[index];
   }
 }
