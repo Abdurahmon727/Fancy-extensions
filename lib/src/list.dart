@@ -24,7 +24,7 @@ extension FancyExtensionsList<T> on List<T> {
   /// Safely gets the element at the specified index.
   /// Returns `null` if the index is out of bounds, or the provided `defaultValue` if specified.
   T? tryGet(int index, {T? defaultValue}) {
-    if (index < 0 || index >= (this.length ?? 0)) {
+    if (index < 0 || index >= (this.length)) {
       return defaultValue;
     }
     return this[index];
