@@ -6,7 +6,7 @@ extension FancyExtensionsStringNullable on String? {
     return this!;
   }
 
-  /// returns firstLeffter if it exists
+  /// returns firstLetter if it exists
   /// otherwise returns empty string
   String get firstLetterOrBlankString {
     if (this == null || this!.isEmpty) return '';

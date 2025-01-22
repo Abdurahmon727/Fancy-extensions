@@ -6,21 +6,21 @@ extension FancyExtensionsList<T> on List<T> {
   }
 
   /// Safe way of getting first element
-  /// retutns first element of list if it exists otherwise returns null
+  /// returns first element of list if it exists otherwise returns null
   T? get firstOrNull {
     if (isEmpty) return null;
     return this[0];
   }
 
   /// Safe way of getting last element
-  /// retutns first last of list if it exists otherwise returns null
+  /// returns first last of list if it exists otherwise returns null
   T? get lastOrNull {
     if (isEmpty) return null;
     return this[length - 1];
   }
 
   /// Safe way of getting element at [index]
-  /// retutns first last of list if it exists otherwise returns null
+  /// returns first last of list if it exists otherwise returns null
   T? elementAtOrNull(int index) {
     try {
       final element = this[index];
